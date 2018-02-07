@@ -1,9 +1,9 @@
 local jwt = require "resty.jwt"
 local cjson = require "cjson"
 local basexx = require "basexx"
-local secret = os.getenv("JWT_SECRET")
+local secret = "hoge" -- os.getenv("JWT_SECRET")
 
-assert(secret ~= nil, "Environment variable JWT_SECRET not set")
+-- assert(secret ~= nil, "Environment variable JWT_SECRET not set")
 
 if os.getenv("JWT_SECRET_IS_BASE64_ENCODED") == 'true' then
     -- convert from URL-safe Base64 to Base64
